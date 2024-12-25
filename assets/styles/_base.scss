@@ -1,0 +1,43 @@
+@use './variables' as *;
+
+// Сброс стилей и базовые настройки
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $base-font;
+    background-color: $background-color;
+    color: $text-color;
+    line-height: 1.6;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $header-font;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 $padding;
+}
