@@ -12,7 +12,6 @@
 </script>
 
 <style scoped lang="scss">
-@use '~/assets/styles/variables' as *;
 
 .footer {
   background-color: $footer-background;

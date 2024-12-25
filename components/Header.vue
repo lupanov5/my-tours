@@ -1,18 +1,20 @@
 <template>
   <header class="header">
     <div class="container">
-      <div class="logo">
-        <a href="/">MyTours</a>
-      </div>
-      <nav class="nav">
-        <ul>
-          <li><a href="/">Главная</a></li>
-          <li><a href="/tours">Туры</a></li>
-          <li><a href="/contact">Контакты</a></li>
-        </ul>
-      </nav>
-      <div class="cta-button">
-        <a href="/signup" class="button">Записаться</a>
+      <div class="header__wrapper">
+        <div class="logo">
+          <a href="/">MyTours</a>
+        </div>
+        <nav class="nav">
+          <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/tours">Туры</a></li>
+            <li><a href="/contact">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="cta-button">
+          <a href="/signup" class="button">Записаться</a>
+        </div>
       </div>
     </div>
   </header>
@@ -23,32 +25,29 @@
 </script>
 
 <style scoped lang="scss">
-@use '~/assets/styles/variables' as *;
 
 // Основной стиль хедера
 .header {
-  background-color: rgba($primary-color, 0.1); /* Прозрачный фон */
-  color: #000; /* Черный текст */
-  padding: 15px 0; /* Отступы */
   position: fixed;
-  top: 0;
+  top: 20px;
   left: 0;
   right: 0;
   z-index: 100;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень */
-  border-radius: 10px; /* Закругленные углы */
-  width: 100%;
-  margin: 0 auto;
-  transition: background-color 0.3s ease; /* Плавное изменение фона */
-}
 
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: $max-width;
-  margin: 0 auto; /* Центрирование */
-  padding: 0 20px;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto; /* Центрирование */
+    padding: 20px 40px;
+    background-color: rgba($primary-color, 0.1); /* Прозрачный фон */
+    color: #000; /* Черный текст */
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень */
+    border-radius: 60px; /* Закругленные углы */
+    transition: background-color 0.3s ease; /* Плавное изменение фона */
+  }
 }
 
 // Стили для логотипа

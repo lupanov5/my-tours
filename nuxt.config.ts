@@ -1,45 +1,15 @@
-// nuxt.config.ts
 export default defineNuxtConfig({
-  // Задаёт базовые настройки проекта
+  css: ['~/assets/scss/main.scss'],
 
-  // Настройки маршрутов. Убедитесь, что pages включен, если вы используете автоматическую маршрутизацию
-  pages: true,
-
-  // Настройки Vite (по желанию)
   vite: {
-    // Пример настройки пути alias
-    resolve: {
-      alias: {
-        '@': '/<project-path>/',
-      },
-    },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use "~/assets/scss/_variables.scss" as *;'
+        }
+      }
+    }
   },
 
-  server: {
-    cache: false, // отключает кеширование
-    watch: {
-      usePolling: true, // если на сервере используются файловые системы, которые не поддерживают наблюдение изменений, можно включить polling
-    },
-  },
-
-  // Настройки CSS (если у вас есть глобальные стили)
-  css: ['~/assets/styles/main.scss'],
-
-  // Модули Nuxt (по умолчанию список пуст)
-  modules: [],
-
-  // Настройки для Nitro (бэкенд Nuxt)
-  nitro: {
-    preset: 'node-server', // Пример: настройка сервера
-  },
-
-  // Другие настройки (например, для build, runtimeConfig и т.д.)
-  runtimeConfig: {
-    public: {
-      // Добавьте здесь переменные, доступные на клиенте
-    },
-    // Переменные, доступные только на сервере
-  },
-
-  compatibilityDate: '2024-12-25',
-});
+  compatibilityDate: '2024-12-25'
+})
